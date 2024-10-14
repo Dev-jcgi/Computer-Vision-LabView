@@ -1,40 +1,143 @@
-# Pattern Recognition using Labview
+# PATTERN SEARCH
 
-Búsqueda de patrones por medio de una cámara web usando Labview el cual busca un patrón determinado dentro de un entorno. El presente proyecto se realizó con la finalidad de investigar la visión artificial para determinar en qué sectores podremos utilizar nuestro proyecto a futuro.
-Labview es una herramienta gráfica de test, control y diseño mediante la programación. El lenguaje que usa se llama lenguaje G.
-El método usado para nuestra búsqueda de patrones es por medio de vectorización el cual consiste representar las imágenes como si fueran vectores y así facilitar nuestra búsqueda.
-Las limitantes de nuestro proyecto es que solo abarca imágenes o video para el reconocimiento de patrones.
+## Author: Justin Carlos Gonzalez
 
-###Modelo o patrón.
-Un modelo es una descripción global del conjunto de datos. Toma una perspectiva completa y total. En contraste un patrón es una propiedad local de los datos, tal vez sólo la tienen ciertas instancias o atributos.
-Un patrón es la descripción de la región segmentada
-El patrón se forma, usualmente, a partir de una combinación de propiedades (x1, x2, ..., xn), la cual define el espacio de propiedades en la que actúa el clasificador.
-El clasificador no reconoce objetos, reconoce el patrón que define al objeto y si se conoce el patrón que define a un objeto cierto, asigna la región al objeto.
+## Date: December 2023
+## Table of Contents
 
-###Búsqueda de patrones
-Un sistema de reconocimiento de patrones completo consiste en:
-•	Un sensor que recoge las observaciones a clasificar.
-•	Un sistema de extracción de características transforma la información observada en valores numéricos o simbólicos.
-•	Un sistema de clasificación o descripción que, basado en las características extraídas, clasifica la medición.
-Por ejemplo se pueden clasificar imágenes digitales de letras en las clases «A» a «Z» dependiente de sus píxeles o se pueden clasificar huellas dactilares.
+- [Introduction](#introduction)
+- [Defining the problem](#problem-definition)
+- [Objectives](#objectives) 
+    - [General objective](#general-objective) 
+    - [Specific objective](#specific-objective) 
+- [Theoretical Framework](#theoretical-framework) 
+    - [Model or pattern](#model-or-pattern) 
+    - [Pattern Search](#pattern-search) 
+- [Introduction to Language](#introduction-to-language) 
+    - [The language](#the-language)
+- [Development](#development) 
+    - [The algorithm](#the-algorithm)
+    - [The program](#the-program) 
+- [Results](#results) 
+- [Conclusions](#conclusions) 
+- [Bibliography](#bibliography)
 
-Las características de la imagen pueden ser:
-	*Topológicas: número de componentes conexas, agujeros,…
-	*Geométricas: área, perímetro, curvatura,…
-	*Estadísticas: momentos,…
-  
-Un patrón es un conjunto de características.
-Una clase de patrones es un conjunto de patrones “similares”.
-El objetivo del reconocimiento de patrones es asignar un patrón a la clase a la que pertenece (lo más automáticamente posible).
+## Introduction
 
-Desarrollo
-El algoritmo
-Un diagrama genérico del algoritmo se presenta en la siguiente figura: ver manual-tecnico.pdf
+Searching for patterns using a webcam with LabVIEW, which searches for a particular pattern within an environment. This project was carried out with the purpose of researching artificial vision to determine in which sectors we can use our project in the future.
 
-En el primer bloque están concentradas las inicializaciones de los dispositivos y de los bloques de memoria que se reservarán para los cálculos y procesos del algoritmo. En cualquier lenguaje de programación será necesario este proceso.
-El segundo bloque está destinado a comenzar el ciclo ininterrumpido de la búsqueda de la trama que necesariamente debe comenzar con la especificación de la misma, luego esta se tiene que almacenar para las futuras búsquedas.
-El siguiente bloque es en donde el algoritmo entra en funcionamiento; en él se busca la trama en cada una de las imágenes y con ello se hacen los cálculos para la ubicación del objeto en el espacio.
-El bloque de pregunta fin determina si se debe o no salir del ciclo ininterrumpido.
-El bloque de pregunta de nueva búsqueda permite salir del ciclo de búsqueda y regresa al bloque de inserción de la trama para la nueva búsqueda que se supone se tomará como un nuevo objeto.
+LabVIEW is a graphical tool for testing, controlling, and designing through programming. The language it uses is called G language. The method used for our pattern search is through vectorization, which consists of representing the images as vectors, thus facilitating our search.
+
+The limitations of our project are that it only covers images or video for pattern recognition.
+
+## Problem Definition
+
+The problem is that a given pattern must be found within a specific environment, which will be captured by a webcam. When the camera finds the pattern, the application must show the location and determine that it is the same pattern that appeared initially.
+
+## Objectives
+
+### General Objective
+
+Search for a pattern within a given environment, either by video or images, to interpret photographs, recognize images, faces, objects, etc.
+
+### Specific Objective
+
+Find a specific pattern using a webcam and LabVIEW.
+
+## Theoretical Framework
+
+Pattern recognition, also called pattern reading, figure identification, and shape recognition, involves recognizing signal patterns. The patterns are obtained from segmentation, feature extraction, and description processes, where each object is represented by a collection of descriptors. The recognition system assigns each object a category or class (a set of entities that share some distinguishing characteristic).
+
+To recognize patterns, the following processes are followed:
+
+- Data acquisition
+- Feature extraction
+- Decision making
+
+The essential point of pattern recognition is **classification**: signals are classified depending on their characteristics. For example, digital images of letters can be classified in classes "A" to "Z" based on their pixels, or bird songs can be classified based on frequency.
+
+### Model or Pattern
+
+A model is a global description of a dataset, while a pattern is a local property of the data. A pattern is formed from a combination of properties (x₁, x₂, ..., xₙ), defining a property space in which the classifier operates.
+
+The classifier does not recognize objects but rather the pattern that defines the object. If the pattern is known, the object is recognized.
+
+## Pattern Search
+
+A complete pattern recognition system consists of:
+
+- A sensor to collect observations
+- A feature extraction system that transforms observations into numerical or symbolic values
+- A classification or description system that classifies the measurement based on the extracted features
+
+For example, digital images of letters can be classified into classes "A" to "Z", or fingerprints can be classified.
+
+### Image characteristics
+
+- **Topological**: number of related components, holes
+- **Geometric**: area, perimeter, curvature
+- **Statistics**: moments
+
+A **pattern** is a set of characteristics, and a **class of patterns** is a set of "similar" patterns. The goal is to assign a pattern to the correct class as automatically as possible.
+
+## Introduction to Language
+
+LabVIEW is a graphical tool for testing, controlling, and designing through programming. The language it uses is called G language. This program was created by National Instruments and was first released in 1986. Now it is available for multiple platforms such as Windows, UNIX, and Linux.
+
+LabVIEW's programs are called VI (Virtual Instrument), which hints at its original use for instrument control. LabVIEW's motto is: *"The power is in the Software."*
+
+### Main uses:
+
+- Data acquisition
+- Instrument control
+- Industrial automation (PAC)
+- Control design (rapid prototyping, hardware-in-the-loop)
+- Embedded design
+
+The G language is high-level when used through its drag-and-drop graphical interface, although it also supports other languages like C#, C++, and Java.
+
+## Development
+
+### The Algorithm
+
+A generic diagram of the algorithm is presented below:
+
+![Chart](./img/0.png)
 
 
+1. Device and memory initialization
+2. Frame specification and storage for searches
+3. Search within the frames
+4. End search loop or start a new search
+
+### The Program
+
+![Program](./img/1.png)
+
+1. Memory reserve and camera setup
+
+![Program](./img/2.png)
+
+2. Frame selection and storage
+3. Searching for the pattern in the images
+![Program](./img/3.png)
+4. Exit blocks for the search and program
+
+## Results
+
+First, using the webcam, a photo is taken where the pattern to search for is selected. Once cut, the pattern is displayed on the left, and the search begins on the right window.
+
+![Result](./img/4.png)
+
+![Result](./img/5.png)
+
+## Conclusions
+
+The project yielded the expected results by successfully finding the patterns. With further development, it could be used to recognize faces, fingerprints, or detect imperfections in materials in industry.
+
+## Bibliography
+
+1. [Computer Vision: Luis Baumela](http://www.dia.fi.upm.es/~lbaumela/Alcala) - Department of Artificial Intelligence, Polytechnic University of Madrid
+2. [Bionics](http://es.wikipedia.org/wiki/Biónica) - Accessed November 30, 2014
+3. [Artificial Vision](http://es.wikipedia.org/wiki/Visión_artificial) - Accessed November 30, 2014
+4. **Image Processing with LabVIEW and IMAQ Vision** by Thomas Kilinger - Prentice Hall PTR
