@@ -1,8 +1,14 @@
 # PATTERN SEARCH
+---
+## Author: Juan Carlos Gonzalez
 
-## Author: Justin Carlos Gonzalez
+## Email: jcgi.laboral@gmail.com
 
 ## Date: December 2023
+
+---
+
+---
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -21,6 +27,8 @@
 - [Results](#results) 
 - [Conclusions](#conclusions) 
 - [Bibliography](#bibliography)
+
+---
 
 ## Introduction
 
@@ -119,8 +127,11 @@ A generic diagram of the algorithm is presented below:
 ![Program](./img/2.png)
 
 2. Frame selection and storage
+
 3. Searching for the pattern in the images
+
 ![Program](./img/3.png)
+
 4. Exit blocks for the search and program
 
 ## Results
@@ -128,6 +139,8 @@ A generic diagram of the algorithm is presented below:
 First, using the webcam, a photo is taken where the pattern to search for is selected. Once cut, the pattern is displayed on the left, and the search begins on the right window.
 
 ![Result](./img/4.png)
+
+<p></p>
 
 ![Result](./img/5.png)
 
